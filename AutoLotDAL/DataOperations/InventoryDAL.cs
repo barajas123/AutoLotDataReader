@@ -91,5 +91,20 @@ namespace AutoLotDAL.DataOperations
             }
             return car;
         }
+
+        public void InsertAuto(string color, string make, string petName)
+        {
+            OpenConnection();
+            // format and execute the SQL statement
+            string sql = $"INSERT INTO Inventory (Make,Color,PetName) VALUES ('{make}','{color}','{petName}');";
+
+            // execute using our connection
+            using (SqlCommand command = new SqlCommand(sql,_sqlConnection))
+            {
+                command.CommandType = CommandType.Text;
+                command.ExecuteNonQuery();
+            }
+            CloseConnection();
+        }
     }
 }
