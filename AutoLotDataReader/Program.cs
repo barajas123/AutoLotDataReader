@@ -38,10 +38,10 @@ namespace AutoLotDataReader
             var cnStringBuilder = new SqlConnectionStringBuilder
             {
                 InitialCatalog = "AutoLot",
-                DataSource = "masterdb.cc4nxjhwbbqs.us-east-2.rds.amazonaws.com,1433",
+                DataSource = "connectionString",
                 ConnectTimeout = 30,
-                UserID = "admin",
-                Password = "507916ab"
+                UserID = "user",
+                Password = "pass"
 
             };
 

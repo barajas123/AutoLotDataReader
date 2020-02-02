@@ -18,7 +18,7 @@ namespace AutoLotDAL.DataOperations
         private SqlConnection _sqlConnection = null;
         
 
-        public InventoryDAL() : this(@"Data Source=masterdb.cc4nxjhwbbqs.us-east-2.rds.amazonaws.com,1433; Initial Catalog=AutoLot; User=admin; Password=507916ab;")
+        public InventoryDAL() : this(@"connectionString")
         {
 
         }
